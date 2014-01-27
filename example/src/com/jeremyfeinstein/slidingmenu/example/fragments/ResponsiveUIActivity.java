@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.view.View;
-
 import com.actionbarsherlock.view.MenuItem;
 import com.jeremyfeinstein.slidingmenu.example.R;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
@@ -19,7 +18,7 @@ import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
  * On tablets, it will will do the same general thing. In portrait
  * mode, it will enable the SlidingMenu, and in landscape mode, it
  * will be a dual pane layout.
- * 
+ *
  * @author jeremy
  *
  */
@@ -53,7 +52,7 @@ public class ResponsiveUIActivity extends SlidingFragmentActivity {
 		if (savedInstanceState != null)
 			mContent = getSupportFragmentManager().getFragment(savedInstanceState, "mContent");
 		if (mContent == null)
-			mContent = new BirdGridFragment(0);	
+			mContent = new BirdGridFragment(0);
 		getSupportFragmentManager()
 		.beginTransaction()
 		.replace(R.id.content_frame, mContent)
@@ -108,7 +107,7 @@ public class ResponsiveUIActivity extends SlidingFragmentActivity {
 				getSlidingMenu().showContent();
 			}
 		}, 50);
-	}	
+	}
 
 	public void onBirdPressed(int pos) {
 		Intent intent = BirdActivity.newInstance(this, pos);
